@@ -1,0 +1,21 @@
+version: '3'
+services:
+
+  #APP SERVICES
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portofolio_web
+    restart: unless-stopped
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./:/app
+    networks:
+      - protofolio
+
+#DOCKER NETWORKS
+networks:
+  protofolio:
+    driver: bridge
