@@ -4,7 +4,7 @@ FROM node:16
 WORKDIR /app
 
 # Copy Package.json to current Location
-COPY package*.json ./app
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Exposing Port
-EXPOSE 3000
+EXPOSE 9876
 
 # Run App
 CMD ["npm", "run", "server"]
