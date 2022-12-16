@@ -7,17 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: portofolio_web
-    restart: unless-stopped
-    tty: true
+    restart: always
     working_dir: /app
-    volumes:
-      - ./:/app
     ports:
       - "9000:9876"
-    networks:
-      - protofolio
-
-#DOCKER NETWORKS
-networks:
-  protofolio:
-    driver: bridge

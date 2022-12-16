@@ -12,8 +12,5 @@ RUN npm install
 # Add Everything to Docker Image
 COPY . .
 
-# Exposing Port
-EXPOSE 9000
-
 # Run App
 CMD ["npm", "run", "server"]
