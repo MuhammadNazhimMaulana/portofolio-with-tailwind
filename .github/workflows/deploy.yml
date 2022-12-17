@@ -16,7 +16,7 @@ jobs:
         VERSION=$(cat .version) 
         echo "VER=$VERSION" >> $GITHUB_ENV 
         
-    - uses: appleboy/ssh-action@v0.1.4
+    - uses: appleboy/ssh-action@master
       name: executing remote ssh to server
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
