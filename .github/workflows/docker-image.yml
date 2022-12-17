@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Image Update
 
 on:
   workflow_call:
@@ -24,6 +24,6 @@ jobs:
 
     - name: build the docker image
       run: docker build . --file dockerfile --tag ${{secrets.DOCKER_USERNAME}}/portofolio-web:${{env.VER}}
-      
+
     - name: push to dockerhub
       run: docker push ${{secrets.DOCKER_USERNAME}}/portofolio-web:${{env.VER}}
