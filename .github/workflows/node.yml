@@ -1,4 +1,4 @@
-name: CI Check
+name: CI
 run-name: ${{ github.actor }} Push Update
 
 on:
