@@ -10,12 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+
     - name: set variables
       run: |
         VERSION=$(cat .version) 
         echo "VER=$VERSION" >> $GITHUB_ENV 
     - uses: appleboy/ssh-action@master
-      name: executing remote ssh to server
+
+    - name: executing remote ssh to server
       env:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
