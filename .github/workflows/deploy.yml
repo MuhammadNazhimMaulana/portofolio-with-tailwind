@@ -30,4 +30,4 @@ jobs:
         envs: DOCKER_USERNAME,DOCKER_PASSWORD,APP_VERSION
         script: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-          docker service update --image ${{secrets.DOCKER_USERNAME}}/porotofolio-web:$APP_VERSION --force bone-sandbox_portofolio --with-registry-auth
+          docker service update --image ${{secrets.DOCKER_USERNAME}}/portofolio-web:$APP_VERSION --force bone-sandbox_portofolio --with-registry-auth
